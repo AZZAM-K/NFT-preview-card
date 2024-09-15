@@ -1,0 +1,109 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
+:root {
+  --soft-blue: hsl(215, 51%, 70%);
+  --cyan: hsl(178, 100%, 50%);
+  --very-dark-blue-1: hsl(217, 54%, 11%); /*main BG*/
+  --very-dark-blue-2: hsl(216, 50%, 16%); /*card BG*/
+  --very-dark-blue-3: hsl(215, 32%, 27%); /*line*/
+  --white: hsl(0, 0%, 100%);
+}
+body {
+  font-family: "Outfit";
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  padding: 0.5rem;
+  background: var(--very-dark-blue-1);
+}
+.card {
+  background: var(--very-dark-blue-2);
+  border-radius: 10px;
+  padding: 1.25em;
+  width: 18rem;
+}
+.card-img {
+  width: 18rem;
+  overflow: hidden;
+  position: relative;
+  border-radius: inherit;
+  height: min-content;
+  cursor: pointer;
+}
+.hover-state {
+  z-index: 2;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.5;
+  background: var(--cyan);
+  display: none;
+}
+.card-img:hover .hover-state {
+  display: block;
+}
+.card-img:hover .eye-icon {
+  display: block;
+}
+.eth-img {
+  width: 100%;
+  border-radius: inherit;
+}
+.eye-icon {
+  display: none;
+  z-index: 3;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+h3 {
+  color: var(--white);
+  cursor: pointer;
+}
+h3:hover {
+  color: var(--cyan);
+}
+p {
+  color: var(--soft-blue);
+  font-size: 1.125em;
+}
+.card-info {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1em;
+  border-bottom: 2px solid var(--very-dark-blue-3);
+  padding-bottom: 1.75em;
+}
+.creation {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  font-size: 1em;
+}
+.creation img {
+  width: 2.5em;
+  border-radius: 50%;
+  border: 2px solid var(--white);
+}
+.creation span {
+  color: var(--white);
+  cursor: pointer;
+}
+.creation span:hover {
+  color: var(--cyan);
+}
+.ethereum {
+  display: flex;
+  align-items: center;
+  gap: 0.25em;
+  color: var(--cyan);
+  font-weight: 400;
+}
+.time-left {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  color: var(--soft-blue);
+}
